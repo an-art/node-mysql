@@ -1,0 +1,9 @@
+{
+    "name": "task",
+    "version": "1.0.0",
+    "dependencies": {
+        "express": "^4.13.4",
+        "mysql": "^2.10.2",
+        "pdfkit": "^0.8.3"
+    }
+}

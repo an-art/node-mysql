@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <form id="search">
+            <input type="text" name="firstName" placeholder="Введите имя">
+            <input type="submit" value="Найти">
+        </form>
+        <script>
+            search.onsubmit = function() {
+                const xhr = new XMLHttpRequest();
+                xhr.open('POST', '/sendRequest', true);
+                xhr.send(JSON.stringify({firstName: this.elements.firstName.value}));
+                this.elements.firstName.value = '';
+                return false;
+            };
+        </script>
+    </body>
+</html>
